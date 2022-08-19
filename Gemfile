@@ -28,6 +28,8 @@ gem "stimulus-rails"
 
 gem "dotenv-rails", groups: [:development, :test]
 
+gem "cloudinary"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

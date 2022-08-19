@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
+      raise
       redirect_to @article, notice: "Article was successfully created."
     else
       render :new, status: :unprocessable_entity
@@ -53,6 +54,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, photos: [])
     end
 end
